@@ -5,6 +5,7 @@ if has('win32')
     set rtp+=C:/Users/kakakun/.vim/bundle/Vundle.vim
 else
     set rtp+=~/.vim/bundle/Vundle.vim
+endif
     
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -51,6 +52,7 @@ colorscheme solarized
 "  ×ÖÌå
 if has('win32')
     set guifont=Consolas:h11
+endif
 
 " ÉèÖÃÎÄ×Ö±àÂë
 set fileencodings=utf-8
