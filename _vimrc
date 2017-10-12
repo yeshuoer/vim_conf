@@ -14,15 +14,23 @@ call vundle#end()            " required
 filetype plugin on    " required
 
 let mapleader = ","
+let maplocalleader = "\\"
+
 nnoremap <leader>d dd
 nnoremap <leader>ev :vsp ~/_vimrc<cr> 
 nnoremap <leader>sv :so ~/_vimrc<cr>
 nnoremap <leader>U viwUe
+nnoremap <leader>nt :NERDTree<cr>
 
-nnoremap <leader> <c-w>
+" ´°¿ÚºÍ±êÇ©Ó³Éä
+nnoremap <leader>w <c-w>
 nnoremap <leader>t :tab
 
 iabbrev @@ zkyeshuoer@gmail.com
+
+" ×¢ÊÍ
+autocmd FileType javascript nnoremap <buffer> <localleader>c I//<space><esc>
+autocmd FileType python nnoremap <buffer> <localleader>c I#<space><esc>
 
 set number
 set hlsearch
