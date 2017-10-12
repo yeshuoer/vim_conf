@@ -1,15 +1,18 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 " 启用vundle来管理vim插件
-set rtp+=C:/Users/kakakun/.vim/bundle/Vundle.vim
+if has('win32')
+    set rtp+=C:/Users/kakakun/.vim/bundle/Vundle.vim
+else
+    set rtp+=~/.vim/bundle/Vundle.vim
+    
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'posva/vim-vue'
 Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'raimondi/delimitmate'
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
 call vundle#end()            " required
 filetype plugin on    " required
 
@@ -46,7 +49,8 @@ set background=light
 colorscheme solarized
 
 "  字体
-set guifont=Consolas:h11
+if has('win32')
+    set guifont=Consolas:h11
 
 " 设置文字编码
 set fileencodings=utf-8
